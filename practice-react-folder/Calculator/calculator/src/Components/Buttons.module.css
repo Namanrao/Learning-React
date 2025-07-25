@@ -1,0 +1,9 @@
+.button-styling {
+  padding: 3px;
+  border-radius: 5px;
+  border-style: black;
+  height: 65px;
+  width: 65px;
+  margin: 10px;
+  cursor: pointer;
+}

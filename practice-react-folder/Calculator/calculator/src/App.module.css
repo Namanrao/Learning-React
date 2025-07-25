@@ -1,0 +1,8 @@
+.container-center {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  border: 3px solid black;
+}

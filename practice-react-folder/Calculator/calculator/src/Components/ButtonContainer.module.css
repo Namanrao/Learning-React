@@ -1,0 +1,7 @@
+.container-boundary {
+  flex-grow: 1; /* take the remaining height */
+  border: 1px solid black;
+  box-sizing: border-box;
+  overflow: auto; /* optional: scroll if content overflows */
+  padding: 0px 70px 0px 70px;
+}

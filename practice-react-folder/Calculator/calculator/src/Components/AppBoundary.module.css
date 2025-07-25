@@ -1,0 +1,8 @@
+.app-boundary {
+  height: 600px;
+  width: 400px;
+  border: 2px solid rgb(161, 160, 160);
+  padding: 20px 35px;
+  display: flex;
+  flex-direction: column;
+}

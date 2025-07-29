@@ -1,10 +1,5 @@
 import styles from "./FoodInput.module.css";
-function FoodInput() {
-
-const handleOnChnage = (event)=>{
-  console.log(event.target.value);
-}
-
+function FoodInput({ handleOnChnage }) {
   return (
     <>
       <input

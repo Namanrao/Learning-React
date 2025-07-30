@@ -4,21 +4,23 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Container from "./Components/Container";
 import FoodInput from "./Components/FoodInput";
+import { useState } from "react";
 function App() {
-  let foodItems = ["dal", "Green Vegetables", "Roti", "Salad", "Milk", "Ghee"];
-  let texttoshow = "Food Item Entered by user";
-  const handleOnChnage = (event) => {
-    console.log(event.target.value);
-    texttoshow = event.target.value;
+  let [foodItems, setFoodItems] = useState([]);
+
+  const onKeyDown = (event) => {
+    if (event.key === "Enter") {
+      let newFoodItem = event.target.value;
+      let newItems = [...foodItems, newFoodItem];
+      setFoodItems(newItems);
+    }
   };
   return (
     <>
       <Container>
         <h1 className="food-heading">Healthy Foods</h1>
+        <FoodInput handleKeyDown={onKeyDown}></FoodInput>
         <ErrorMessage items={foodItems}></ErrorMessage>
-        <FoodInput handleOnChnage={handleOnChnage}></FoodInput>
-        <p>{texttoshow}</p>
-
         <FoodItems items={foodItems}></FoodItems>
       </Container>
     </>

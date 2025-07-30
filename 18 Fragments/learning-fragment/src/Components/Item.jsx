@@ -9,10 +9,12 @@
 import styles from "./Item.module.css";
 // In fact you could also destructure the array inside the parameters itself as in .
 
-function Item({ foodItem, handleBuyButtonClicked }) {
+function Item({ foodItem, bought, handleBuyButtonClicked }) {
   return (
     <>
-      <li className={`${styles["kg-item"]} list-group-item`}>
+      <li
+        className={`${styles["kg-item"]} list-group-item ${bought && "active"}`}
+      >
         <span className={`${styles["kg-span"]}`}>{foodItem}</span>
         <button
           className={`${styles.button} btn btn-info`}

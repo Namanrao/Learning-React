@@ -1,0 +1,11 @@
+.size {
+  padding: 10px;
+  border-radius: 15px;
+  border: none;
+  margin-top: 15px;
+  width: 65%;
+  background-color: rgba(128, 128, 128, 0.125);
+}
+.button-style {
+  margin-top: 10px;
+}

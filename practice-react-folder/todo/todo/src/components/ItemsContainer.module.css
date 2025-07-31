@@ -1,0 +1,13 @@
+.size {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(196, 182, 182, 0.347);
+  width: 90%;
+  margin-left: 6%;
+  margin-top: 10px;
+  border-radius: 15px;
+  height: auto;
+  margin-bottom: 3%;
+  padding: 0 10px;
+  box-shadow: 3px 3px 4px rgb(182, 180, 180);
+}

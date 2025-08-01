@@ -5,8 +5,8 @@ import ItemsContainer from "./components/ItemsContainer";
 import { useState } from "react";
 const App = () => {
   let [currentItem, setcurrentItem] = useState(["wake up", "Brush Teeth"]);
-  let handleClickButton = () => {
-    console.log("Button was clicked");
+  let handleClickButton = (event) => {
+    console.log(event);
   };
   return (
     <>

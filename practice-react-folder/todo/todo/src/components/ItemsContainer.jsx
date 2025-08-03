@@ -1,11 +1,15 @@
 import styles from "./ItemsContainer.module.css";
 import Items from "./Items";
 
-const ItemsContainer = ({ items, addItems }) => {
+const ItemsContainer = ({ items, handleRemove }) => {
   return (
     <div className={styles.size}>
       {items.map((item, index) => (
-        <Items key={index} item={item} />
+        <Items
+          key={index}
+          item={item}
+          handleRemove={() => handleRemove(item)}
+        />
       ))}
     </div>
   );

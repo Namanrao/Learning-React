@@ -1,9 +1,13 @@
 import styles from "./Items.module.css";
-const Items = ({ item }) => {
+const Items = ({ item, handleRemove }) => {
   return (
     <div className={styles["size"]}>
       {item}
-      <button className={`${styles["button"]} btn btn-danger`} type="button">
+      <button
+        onClick={handleRemove}
+        className={`${styles["button"]} btn btn-danger`}
+        type="button"
+      >
         Remove
       </button>
     </div>

@@ -9,6 +9,10 @@ const App = () => {
     let newItems = [...currentItems, newItem];
     setcurrentItems(newItems);
   };
+
+  const handleRemove = (itemToRemove) => {
+    setcurrentItems(currentItems.filter((item) => item !== itemToRemove));
+  };
   return (
     <>
       <Background>
@@ -16,7 +20,10 @@ const App = () => {
           <InputContainer
             handleClickButton={handleClickButton}
           ></InputContainer>
-          <ItemsContainer items={currentItems}></ItemsContainer>
+          <ItemsContainer
+            items={currentItems}
+            handleRemove={handleRemove}
+          ></ItemsContainer>
         </Frame>
       </Background>
     </>

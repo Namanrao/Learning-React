@@ -4,9 +4,10 @@ import InputContainer from "./components/InputContainer";
 import ItemsContainer from "./components/ItemsContainer";
 import { useState } from "react";
 const App = () => {
-  let [currentItem, setcurrentItem] = useState(["wake up", "Brush Teeth"]);
-  let handleClickButton = (event) => {
-    console.log(event);
+  let [currentItems, setcurrentItems] = useState(["wake up", "Brush Teeth"]);
+  let handleClickButton = (newItem) => {
+    let newItems = [...currentItems, newItem];
+    setcurrentItems(newItems);
   };
   return (
     <>
@@ -15,7 +16,7 @@ const App = () => {
           <InputContainer
             handleClickButton={handleClickButton}
           ></InputContainer>
-          <ItemsContainer items={currentItem}></ItemsContainer>
+          <ItemsContainer items={currentItems}></ItemsContainer>
         </Frame>
       </Background>
     </>
